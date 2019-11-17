@@ -5,6 +5,7 @@ import AMEX from './images/american_express_logo.png'
 import Discover from './images/Discover-logo.jpg'
 import MasterCard from './images/Mastercard_logo.0.jpg'
 import Visa from './images/new_visa_big.gif'
+import './CreditCardInput.css'
 
 
 class CreditCardInput extends Component{
@@ -70,25 +71,40 @@ class CreditCardInput extends Component{
     render(){
         return(
             <div>
+                <h1>This is my Form</h1>
+            <div>
 		        <form>
+                    <div>
                     <label>
                         Name:
                         <input type="text" id="name" placeholder="Name" value={this.state.name} onChange={(event)=>this.handleFormChange(event)}></input>
                     </label>
+                    </div>
+                    <div>
                     <label>
                         email:
                         <input type="email" id="email" placeholder="email@email.com" value={this.state.email} onChange={(event)=>this.handleFormChange(event)}></input>
                     </label>
-                    <label>
-                        Number:
-                        <input type="text" id="number" placeholder={0} value={this.state.number} onChange={(event)=>this.handleFormChange(event)}></input>
-                    </label>
-                    <div style={{maxHeight:"25px", maxWidth:"35px"}}>
-                        {this.state.CreditCardLogo ?
-                            <img style={{maxHeight:"50px", maxWidth:"65px"}} src={this.state.CreditCardLogo}/>:<div/>}
                     </div>
+                    <div id="grid-container">
+                        <div>
+
+                        </div>
+                        <div>
+                        <label>
+                            Number:
+                            <input type="text" id="number" placeholder={0} value={this.state.number} onChange={(event)=>this.handleFormChange(event)}></input>
+                        </label>
+                        </div>
+                        <div style={{maxHeight:"25px", maxWidth:"35px"}}>
+                            {this.state.CreditCardLogo ?
+                                <img style={{maxHeight:"50px", maxWidth:"65px"}} src={this.state.CreditCardLogo}/>:<div/>}
+                        </div>
+                    </div>
+
                 </form>
 
+            </div>
             </div>
 
         );

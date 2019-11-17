@@ -1,0 +1,5 @@
+#grid-container{
+    display: grid;
+    grid-template-columns: 25% 300px auto 25%;
+    justify-content: center;
+}
